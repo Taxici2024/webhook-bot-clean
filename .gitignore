@@ -1,1 +1,30 @@
 node_modules/ 
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Environment files
+.env
+
+# Vercel / build
+.vercel/
+dist/
+build/
+
+# Mac / Windows
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
