@@ -1,8 +1,5 @@
-// api/webhook.js
-
 export default function handler(req, res) {
   if (req.method === "GET") {
-    // Meta envía estos parámetros cuando valida el webhook
     const mode = req.query["hub.mode"];
     const token = req.query["hub.verify_token"];
     const challenge = req.query["hub.challenge"];
