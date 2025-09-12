@@ -1,10 +1,10 @@
 export default function handler(req, res) {
+  const VERIFY_TOKEN = "taxici_token_2025"; // tu token de verificación
+
   if (req.method === "GET") {
     const mode = req.query["hub.mode"];
     const token = req.query["hub.verify_token"];
     const challenge = req.query["hub.challenge"];
-
-    const VERIFY_TOKEN = "taxici_token_2025"; // tu token de verificación
 
     if (mode === "subscribe" && token === VERIFY_TOKEN) {
       console.log("Webhook verificado correctamente ✅");
@@ -16,8 +16,8 @@ export default function handler(req, res) {
   }
 
   if (req.method === "POST") {
-    // Aquí procesamos los mensajes entrantes
-    console.log("Mensaje recibido:", JSON.stringify(req.body, null, 2));
+    // Aquí procesamos los mensajes entrantes de WhatsApp
+    console.log("📩 Mensaje recibido:", JSON.stringify(req.body, null, 2));
     return res.sendStatus(200);
   }
 
