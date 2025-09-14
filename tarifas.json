@@ -1,0 +1,4 @@
+{
+  "zona1": { "taxi": 50, "mototaxi": 30, "reparto": 40 },
+  "zona2": { "taxi": 70, "mototaxi": 50, "reparto": 60 }
+}
